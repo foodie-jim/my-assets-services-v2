@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"net/http"
 	"os"
 	
@@ -13,9 +12,7 @@ func main() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
-		log.Fatal("$PORT must be set")
-	} else {
-		log.Println("$PORT is " + port)
+		port = "3000"
 	}
 
 	r := gin.Default()
